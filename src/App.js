@@ -1,4 +1,5 @@
 import './App.css';
+import concert from "./concert.png";
 
 function Header(props) {
   return(
@@ -12,6 +13,7 @@ function Main(props) {
   return(
     <section>
       <p>{props.listen}</p>
+      <img src={concert} height={300} />
       <ul style={{ textAlign: "left"}}>
         {props.musicArray.map((music) => (
           <li key={music.id}>{music.title}</li>
@@ -42,7 +44,7 @@ function App() {
   return (
     <div className="App">
       <Header name="Sounds"></Header>
-      <Main listen="Listen Live" musicArray={musicObjs}/>
+      <Main listen="Music Genres" musicArray={musicObjs}/>
       <Footer date={new Date().getFullYear()}/>
     </div>
   );
