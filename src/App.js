@@ -13,7 +13,7 @@ function Main(props) {
   return(
     <section>
       <p>{props.listen}</p>
-      <img src={concert} height={300} />
+      <img src={concert} height={350} alt="Music performed at concert" />
       <ul style={{ textAlign: "left"}}>
         {props.musicArray.map((music) => (
           <li key={music.id}>{music.title}</li>
