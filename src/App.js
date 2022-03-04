@@ -12,6 +12,11 @@ function Main(props) {
   return(
     <section>
       <p>{props.listen}</p>
+      <ul style={{ textAlign: "left"}}>
+        {props.musicArray.map((music, i) => (
+          <li key={i}>{music}</li>
+        ))}
+      </ul>
     </section>
   )
 }
@@ -24,11 +29,20 @@ function Footer(props) {
   )
 }
 
+const musicArray = [
+  "Smooth Jazz",
+  "Classical",
+  "Heavy Metal",
+  "Pop"
+];
+
+musicArray.map( (music) => console.log(music));
+
 function App() {
   return (
     <div className="App">
       <Header name="Sounds"></Header>
-      <Main listen="Listen Live"/>
+      <Main listen="Listen Live" musicArray={musicArray}/>
       <Footer date={new Date().getFullYear()}/>
     </div>
   );
