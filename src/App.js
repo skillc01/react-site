@@ -13,8 +13,8 @@ function Main(props) {
     <section>
       <p>{props.listen}</p>
       <ul style={{ textAlign: "left"}}>
-        {props.musicArray.map((music, i) => (
-          <li key={i}>{music}</li>
+        {props.musicArray.map((music) => (
+          <li key={music.id}>{music.title}</li>
         ))}
       </ul>
     </section>
@@ -36,13 +36,13 @@ const musicArray = [
   "Pop"
 ];
 
-musicArray.map( (music) => console.log(music));
+const musicObjs = musicArray.map((music, i) => ({ id: i, title: music}));
 
 function App() {
   return (
     <div className="App">
       <Header name="Sounds"></Header>
-      <Main listen="Listen Live" musicArray={musicArray}/>
+      <Main listen="Listen Live" musicArray={musicObjs}/>
       <Footer date={new Date().getFullYear()}/>
     </div>
   );
