@@ -42,7 +42,7 @@ const musicObjs = musicArray.map((music, i) => ({ id: i, title: music}));
 
 function App() {
   return (
-    <div className="App">
+    <div class="App">
       <Header name="Sounds"></Header>
       <Main listen="Music Genres" musicArray={musicObjs}/>
       <Footer date={new Date().getFullYear()}/>

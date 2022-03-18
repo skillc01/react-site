@@ -3,5 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-ReactDOM.render(<App/>, document.getElementById('root')
+function App2() {
+    return(
+        <h1>Second App</h1>
+    )
+}
+
+ReactDOM.render(
+    <>
+        <App/>
+        <App2/>
+    </>,
+    document.getElementById('root')
+    
 );
